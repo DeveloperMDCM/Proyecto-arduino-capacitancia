@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+  <title>Termometro</title>
+</head>
+<body onload="startTime()">
+  
+
+ 
+
+  <div class="contenedor">
+    <div class="hijo1">
+      <div class="container">
+        <div class="container_chart">
+          <div class="box">
+            <div class="chart" id="dato2" >
+              <h1 id="field2"></h1>
+            </div>
+            <h2>CAPACITANCIA</h2>
+          </div>
+        </div>
+          <div class="botones">
+        <button class="actualizar" onclick="CargarDatos();">Actualizar</button>
+         <button class="actualizar">  <a href="actualizar.html">Datos en grafica</a></button>
+        </div> 
+      </div>
+    </div>
+    <div class="hijo2">
+      <form id="frm1" action="index.html"  onsubmit="return false">
+        <div class="inputs">
+          <br>
+          <label for="">Voltaje:</label>
+          <input type="number" id="Voltaje" placeholder="Voltaje" required value="5">
+          <label for="">Capacitancia:</label>
+          <input type="number" id="Capacitancia" placeholder="Capacitancia uF" required value="5">
+          <label for="">Resistencia:</label>
+          <input type="number" id="Resistencia" placeholder="Resistencia" required value="444">
+          <label for="">Constante tiempo:</label>
+          <input type="number" id="Constante" placeholder="Constante tiempo" disabled >
+          <label for="">Joules:</label>
+          <input type="number" id="Joules" placeholder="Joules" disabled>
+          <br>
+          <input type="submit" id="Calcular" onclick="getData()" value="Calcular"></input>
+        </div>
+      </div>
+    </form>
+
+    <div class="hijo3">
+      <canvas id="grafica" width="200" height="150"></canvas>
+      <br>
+      <canvas id="bar-chart" width="200" height="150" "></canvas>
+    </div>
+  
+  <!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
